@@ -32,7 +32,6 @@ const displayEntriesTabular = () => {
   let tableDiv = document.getElementById("table-div");
 
   tableDiv.innerHTML = `<table class="table">
-  <thead>
   <tr>
     <th scope="col" class="text-center">Name</th>
     <th scope="col" class="text-center">Email</th>
@@ -40,7 +39,6 @@ const displayEntriesTabular = () => {
     <th scope="col" class="text-center">Dob</th>
     <th scope="col" class="text-center">Accepted terms?</th>
   </tr>
-  </thead>
     ${rows}
   </table>`;
 };
@@ -82,12 +80,10 @@ function getAge(today, birthDate) {
   return age;
 }
 
-let dateSelector = document.getElementById("datepicker");
+let dateSelector = document.getElementById("dob");
 
 dateSelector.addEventListener("change", () => {
-  let [year, month, date] = document
-    .getElementById("datepicker")
-    .value.split("-");
+  let [year, month, date] = document.getElementById("dob").value.split("-");
 
   let dob = new Date(year, month, date);
   let Today = new Date();
