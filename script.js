@@ -29,9 +29,9 @@ const displayEntriesTabular = () => {
     })
     .join("\n");
 
-  let tableDiv = document.getElementById("table-data");
+  let tableDiv = document.getElementById("table-div");
 
-  tableDiv.innerHTML = `
+  tableDiv.innerHTML = `<table class="table">
   <thead>
   <tr>
     <th scope="col" class="text-center">Name</th>
@@ -42,7 +42,7 @@ const displayEntriesTabular = () => {
   </tr>
   </thead>
     ${rows}
-  `;
+  </table>`;
 };
 
 const pushUserData = (event) => {
